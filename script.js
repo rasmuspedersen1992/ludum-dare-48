@@ -1,21 +1,10 @@
+const Menu = new MainMenu();
 const Level1 = new Level(1);
 const Level2 = new Level(2);
 const Level3 = new Level(3);
 
+let unlockedLevels = [1];
 
-// class testScene extends Phaser.Scene {
-//   constructor ()
-//     {
-//         super('testScene');
-//     }
-
-//     create ()
-//     {
-//       console.log('wat')
-//       this.scene.start('Level3')
-
-//     }
-// }
 
 const config = {
   // type: Phaser.WEBGL,
@@ -31,6 +20,7 @@ const config = {
     }
   },
   scene: [
+    Menu,
     Level1,
     Level2,
     Level3
@@ -38,9 +28,3 @@ const config = {
 }
 
 const game = new Phaser.Game(config);
-
-
-
-// console.log(game)
-
-// game.scene.add('Level3',Level3);
